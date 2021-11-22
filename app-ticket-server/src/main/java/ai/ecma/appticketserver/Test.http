@@ -1,0 +1,173 @@
+POST localhost/api/auth
+Content-Type: application/json
+
+{
+  "username": "998915776540",
+  "password": "admin"
+}
+
+
+###
+GET localhost/api/auth/check-phone/998910000000
+
+###
+POST localhost/api/auth/check-sms
+Content-Type: application/json
+
+{
+  "code": "884359",
+  "phoneNumber": "998915776540"
+}
+
+###
+POST localhost/api/auth/sign-up
+Content-Type: application/json
+
+{
+  "code": "397907",
+  "phoneNumber": "998910000000",
+  "firstName": "Muhammad",
+  "lastName": "Shaymanov"
+}
+
+### ADMIN TOKEN
+###  "accessToken": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQzMTU0NDIsInN1YiI6Ijk5ODk5MTIzNDU2NyJ9.xU9JafCUII-QO0H9mvudpnQySwOuWe7953h-FLLjqIoEsVuvMZJVfyiAEi1vOm8ouzXEXV5sBc6iDGGuIjV6bw",
+###  "refreshToken": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzU0Mzg2NDIsInN1YiI6Ijk5ODk5MTIzNDU2NyJ9.1mVB4ykrsfCoAHyWRMA_IdrcmC_-TeZFQuE2vuYfsIC_gnWYmcUQa_6Uz5fbQCJ8TMdJLTXJiU_OATvoqW9PEA"
+
+### CLIENT TOKEN
+###  "accessToken": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQzMTM4OTMsInN1YiI6Ijk5ODkxNTc3NjU0MCJ9.odxkLwWjY04j8YN9WWKVYpG5i_HGzXI--7YYGMH8w9leIDB88_9eZ0HVaGwwKl-s3eMwfNC69cj426p32D-3Og",
+### "refreshToken": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzU0MzcwOTMsInN1YiI6Ijk5ODkxNTc3NjU0MCJ9.C0QmaAri_K1k06JWK4N-Q3Zo1oX7A0hn_TMtOVL2VkEG7YC1hueE16N4G1P6XdStCsDHXlXRfPwLUXH7pzh6Iw"
+
+GET localhost/api/ticket/getAll
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQzMTU0NDIsInN1YiI6Ijk5ODk5MTIzNDU2NyJ9.xU9JafCUII-QO0H9mvudpnQySwOuWe7953h-FLLjqIoEsVuvMZJVfyiAEi1vOm8ouzXEXV5sBc6iDGGuIjV6bw
+
+###
+POST localhost/api/pay-type
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQzMTU0NDIsInN1YiI6Ijk5ODk5MTIzNDU2NyJ9.xU9JafCUII-QO0H9mvudpnQySwOuWe7953h-FLLjqIoEsVuvMZJVfyiAEi1vOm8ouzXEXV5sBc6iDGGuIjV6bw
+Content-Type: application/json
+
+{
+  "name": "CLICK",
+  "payTypeEnum": "CARD"
+}
+
+###
+GET localhost/api/pay-type/f72b2b48-4c05-4715-85d8-c57a7a076bed
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzM0MTAwODksInN1YiI6Ijk5ODk5NDg0MDU5NyJ9.kepEKTQtMhcAtZOzfrcCUOX6472e0WU6689mi2o_t2w5apSFT7ZtftGKSJaXA-Ws9Oh-sRkOTmdvbCbT6ZVaVA
+
+###
+DELETE localhost/api/pay-type/989c8e98-4795-41c0-8e24-0b03e25b6421
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzI4MDE4MjAsInN1YiI6Ijk5ODk5NDg0MDU5NyJ9.BOpVvJuw8FekT53tNj332vLpKED1kUCXrnSkIEkmRL0B0HOEDmJhElb-gp73rU-Pl0u71fdkbT7aNVZsrh4kbg
+
+
+###
+POST http://localhost/api/artist
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzM0MTAwODksInN1YiI6Ijk5ODk5NDg0MDU5NyJ9.kepEKTQtMhcAtZOzfrcCUOX6472e0WU6689mi2o_t2w5apSFT7ZtftGKSJaXA-Ws9Oh-sRkOTmdvbCbT6ZVaVA
+Content-Type: application/json
+
+{
+  "name": "Jasur",
+  "description": "Umirov",
+  "photoId": "8db8a1d6-bbf5-4746-ab1a-55bc7985f94c"
+}
+
+
+###
+POST http://localhost/api/event
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzM0MTAwODksInN1YiI6Ijk5ODk5NDg0MDU5NyJ9.kepEKTQtMhcAtZOzfrcCUOX6472e0WU6689mi2o_t2w5apSFT7ZtftGKSJaXA-Ws9Oh-sRkOTmdvbCbT6ZVaVA
+Content-Type: application/json
+
+{
+}
+
+###
+POST http://localhost/api/order
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ0MDE1ODEsInN1YiI6Ijk5ODk5NTAzMzU5NCJ9.CO8ou9TlH3prjbbl2LcypKV1mtlTFsfPV2U72iIqgrJMAml5cVULkBzLzjUlClzW1qCsQZTW4xb0JYIeH3y_kw
+Content-Type: application/json
+
+{
+  "ticketIdList": [
+    "1c53f2e7-1db7-4c52-a2a2-69855df0464a",
+    "508ec157-ee4a-4a02-b0eb-920558718fe2",
+    "4e8348e7-22d3-47ed-b3c7-7b1ba35c6465"
+  ],
+  "orderType": "SOLD"
+}
+
+###
+POST http://localhost/api/order/check
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ0MDE1ODEsInN1YiI6Ijk5ODk5NTAzMzU5NCJ9.CO8ou9TlH3prjbbl2LcypKV1mtlTFsfPV2U72iIqgrJMAml5cVULkBzLzjUlClzW1qCsQZTW4xb0JYIeH3y_kw
+Content-Type: application/json
+
+{
+  "orderId": "5c38cad1-8900-4d27-a1d7-100e02f0d1ff",
+  "price": 3000,
+  "merchantId": "1",
+  "orderType": "SOLD"
+}
+
+###
+POST http://localhost/api/order/finish
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ0MDE1ODEsInN1YiI6Ijk5ODk5NTAzMzU5NCJ9.CO8ou9TlH3prjbbl2LcypKV1mtlTFsfPV2U72iIqgrJMAml5cVULkBzLzjUlClzW1qCsQZTW4xb0JYIeH3y_kw
+Content-Type: application/json
+
+{
+  "orderId": "5c38cad1-8900-4d27-a1d7-100e02f0d1ff",
+  "price": 3000,
+  "merchantId": "1",
+  "orderType": "SOLD"
+}
+
+###
+POST http://localhost/api/bron/booked-buy
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ0MDE1ODEsInN1YiI6Ijk5ODk5NTAzMzU5NCJ9.CO8ou9TlH3prjbbl2LcypKV1mtlTFsfPV2U72iIqgrJMAml5cVULkBzLzjUlClzW1qCsQZTW4xb0JYIeH3y_kw
+Content-Type: application/json
+
+{
+  "price": 1500,
+  "userId": "c8ee8594-9229-4dda-89d4-615fc16bf480",
+  "ticketIdList": [
+    "4e8348e7-22d3-47ed-b3c7-7b1ba35c6465",
+    "1c53f2e7-1db7-4c52-a2a2-69855df0464a",
+    "04a8fd3c-1f48-40b3-94c9-c426fc5785f5"
+  ]
+}
+
+###
+POST http://localhost/api/bron/booked-buy/finish
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ0MDE1ODEsInN1YiI6Ijk5ODk5NTAzMzU5NCJ9.CO8ou9TlH3prjbbl2LcypKV1mtlTFsfPV2U72iIqgrJMAml5cVULkBzLzjUlClzW1qCsQZTW4xb0JYIeH3y_kw
+Content-Type: application/json
+
+{
+  "orderId": "fbb3b296-02a7-4053-9cd2-17e7eadac901",
+  "price": "1500",
+  "cardNumber": "9874563211236549",
+  "payTypeId": "01a2ee57-7ece-45fd-b08f-f5aaac7065ac"
+}
+
+###
+POST http://localhost/payment-return/ticket-payment-cancel-return
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ0MDE1ODEsInN1YiI6Ijk5ODk5NTAzMzU5NCJ9.CO8ou9TlH3prjbbl2LcypKV1mtlTFsfPV2U72iIqgrJMAml5cVULkBzLzjUlClzW1qCsQZTW4xb0JYIeH3y_kw
+Content-Type: application/json
+
+{
+  "ticketIdList": [
+    "1c53f2e7-1db7-4c52-a2a2-69855df0464a",
+    "508ec157-ee4a-4a02-b0eb-920558718fe2",
+    "4e8348e7-22d3-47ed-b3c7-7b1ba35c6465"
+  ],
+  "cardNumber": "1234567891234567"
+}
+
+###
+POST http://localhost/payment-return/ticket-payment-return
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ0MDE1ODEsInN1YiI6Ijk5ODk5NTAzMzU5NCJ9.CO8ou9TlH3prjbbl2LcypKV1mtlTFsfPV2U72iIqgrJMAml5cVULkBzLzjUlClzW1qCsQZTW4xb0JYIeH3y_kw
+Content-Type: application/json
+
+{
+  "ticketReturnOrderId": "26892778-b4a0-43d0-a744-0939fc3bbe83",
+  "cardNumber": "1234567891234567",
+  "price": 1200
+}
+
+###
